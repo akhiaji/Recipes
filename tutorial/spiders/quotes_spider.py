@@ -34,8 +34,6 @@ class QuotesSpider(scrapy.Spider):
             'time_str': time_str,
             'time': time,
             'tags': clean_tags
-
-
         }
         next_page = response.css('div.slider-card__recipes a::attr(href)').extract()
         for i in next_page:
