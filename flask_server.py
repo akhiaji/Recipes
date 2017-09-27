@@ -29,7 +29,7 @@ def hello_monkey():
 @app.before_first_request
 def initialize_recipes():
     decoder = json.JSONDecoder()
-    json_data = decoder.decode(open("/home/akhilesh/Desktop/tutorial/items_quotes_22.json").read())
+    json_data = decoder.decode(open("/home/akhilesh/Desktop/tutorial/recipes.json").read())
     recipes = []
     for i in json_data:
         recipes.append(Recipe(i))
